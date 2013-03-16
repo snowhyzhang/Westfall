@@ -80,7 +80,11 @@ public class Matrix {
         }
         for (int i = 0; i < maxRow; ++i){
             for (int j = 0; j < maxColumn; ++j){
-                System.out.print(matrix[i][j] + "\t");
+                if (matrix[i][j] == 0.0){
+                    System.out.print(Math.abs(matrix[i][j]) + "\t");
+                } else {
+                    System.out.print(matrix[i][j] + "\t");
+                }
             }
             System.out.println();
         }
